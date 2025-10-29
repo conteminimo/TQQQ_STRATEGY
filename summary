@@ -1,0 +1,93 @@
+Assolutamente. Ecco il sommario aggiornato e completo (che chiameremo V14) che include **tutte** le logiche di sicurezza (Riconciliazione, Alert Popup) e la nuova logica "event-driven" (`on_fill`) che abbiamo appena discusso.
+
+Questo è il riepilogo definitivo.
+
+---
+
+### TQQQ Python Grid Bot: Project Master Summary (V14)
+
+#### 1. Project Objective
+To create an automated Python trading bot that connects to Interactive Brokers (IBKR) to execute a specific grid trading strategy on the **TQQQ** ETF. The bot must be robust, stateful, capable of operating during pre-market, regular, and post-market sessions, and **must shut down safely** if its internal state becomes desynchronized from the TWS account.
+
+#### 2. Technical Stack & Connection
+* **Language:** Python 3
+* **API Library:** `ib_insync`
+* **Broker:** Interactive Brokers (IBKR)
+* **Connection Software:** The script connects to a running instance of **Trader Workstation (TWS)** or IB Gateway on the same machine.
+* **Connection Endpoint:** `host='127.0.0.1'`, `port=7497` (default port for **Paper Trading**).
+* **Market Data:** The script must explicitly request **delayed data (Type 3)** to avoid subscription errors (Error 354).
+    * **Code:** `self.ib.reqMarketDataType(3)` must be called immediately after a successful connection.
+
+#### 3. Core File & State Management
+* **Input File (Lot Map):** The bot reads its primary instructions from a CSV file named `tqqq_trading_strategy - lots.csv.csv`. This file contains 88 rows, mapping each `level` (0-87) to the exact number of `shares_to_buy`.
+* **State File (Inventory):** The bot *must* be stateful. It tracks its inventory of open positions by reading from and writing to a JSON file named `bot_state.json`.
+* **Stateful Logic:**
+    * An open lot (a `Lot` object) is written to `bot_state.json` **only after** its corresponding `BUY` order has been confirmed as **`Filled`** and its corresponding `SELL` order has been successfully submitted.
+    * When the bot starts, it reads `bot_state.json` to load its current inventory.
+
+#### 4. Core Logic: Event-Driven Engine
+The bot's primary "engine" is **event-driven**, not price-driven. It reacts to **order fills** (`on_fill` event), not price ticks.
+* **`on_fill` Event:** This is the main handler. When a fill is received, it checks if it was a `BUY` or a `SELL` and triggers the appropriate logic (placing new sell orders, placing the next buy queue, or removing a lot from inventory).
+* **`on_pending_ticker` Event:** This price-tick handler is used **only once** for the *sole purpose* of triggering the initial Level 0 buy. After that, it is de-registered.
+
+#### 5. BUY Logic (The "Engine")
+This logic is split into two distinct parts.
+
+**A. Initial Buy (Level 0)**
+* **Trigger:** The `on_pending_ticker` function, which runs only if `next_level == 0`.
+* **Implementation:** Because `MarketOrder` (MKT) is rejected outside regular hours (RTH), the bot *must* use a `LimitOrder` (LMT).
+* **Price Buffer:** To guarantee an immediate fill (like a MKT order), this LMT order *must* use a **price buffer**. The limit price is set slightly *above* the current price.
+    * **Example:** `limit_price = current_price * (1 + 0.0025)` (i.e., +0.25% slippage buffer).
+* **Monitoring:** The script calls a `place_and_monitor_order` function that **blocks** (using `await self.ib.sleep(2)`) and waits for this specific order to be `Filled` or `Cancelled` to prevent order spam.
+* **Flag:** The order *must* include `outsideRth=True`.
+
+**B. Future Buys (Level 1-87)**
+* **Trigger:** The `on_fill` handler, after a `BUY` order is executed.
+* **Order Type:** These are **Conditional Trigger Orders** submitted to the IBKR server.
+* **No Buffer:** These orders do **not** use a price buffer. The `lmtPrice` is set to be *identical* to the `triggerPrice`.
+* **Chained (Compounded) Triggers:** The trigger price for each level is **1% below the trigger price of the *previous* level**.
+    * *Example:*
+        1.  Level 0 `BUY` fills at **$100.00**.
+        2.  Script calculates trigger for Level 1: `100.00 * 0.99 = $99.00`.
+        3.  Script calculates trigger for Level 2: `99.00 * 0.99 = $98.01`.
+        4.  Script calculates trigger for Level 3: `98.01 * 0.99 = $97.03`.
+* **3-Order Queue (Key Logic):** As soon as an order (e.g., Level 0) is confirmed as `Filled`, the bot *must* immediately **cancel all old conditional BUY orders** and then submit the **next 3** new conditional `BUY` orders (e.g., for Levels 1, 2, and 3). This "cancel-and-replace" action maintains a clean 3-order queue on the server.
+* **Flag:** All conditional orders *must* include `outsideRth=True`.
+
+#### 6. SELL Logic (The "Profit Taker")
+* **Trigger:** The `on_fill` handler, immediately after a `BUY` order is executed.
+* **1-to-1 Mapping:** The strategy is *not* FIFO/LIFO. Each `BUY` lot is tied to its own specific `SELL` order.
+* **Order ID Linking (Key Logic):**
+    1.  A `BUY` order (e.g., for Level 0) is confirmed as `Filled`.
+    2.  The bot *immediately* submits the corresponding `SELL` order.
+    3.  TWS returns a new, unique `orderId` for this `SELL` order (e.g., `sell_order_id: 201`).
+    4.  The bot *must* save this `sell_order_id` *inside* the `Lot` object in the `bot_state.json` file.
+    * *Example `bot_state.json` entry:*
+        `{ "level": 0, "quantity": 94, "purchase_price": 100.00, "sell_target_price": 101.00, "sell_order_id": 201 }`
+* **Order Type:** The sell order is a `LimitOrder` (LMT).
+* **Order Flag:** The order *must* be set as **GTC ("Good-Til-Canceled")** and `outsideRth=True`.
+* **Target Price:** The limit price is set to **1% above** the lot's specific purchase price (e.g., `purchase_price * 1.01`).
+
+#### 7. Safety: Reconciliation Check (On Startup)
+This is a **critical safety feature** that runs *once* when the bot starts, *after* connecting but *before* processing any logic.
+* **Action:** The script calls a `reconcile_state()` function.
+* **Check 1 (Positions):** It compares the total TQQQ position reported by TWS (`ib.reqPositions()`) against the total quantity calculated from `bot_state.json`.
+* **Check 2 (SELL Orders):** It compares the set of open `SELL` order IDs from TWS (`ib.reqAllOpenOrders()`) against the set of `sell_order_id`s stored in `bot_state.json`.
+* **Check 3 (BUY Orders):** It compares the set of open conditional `BUY` order prices from TWS against the set of the 3 expected future trigger prices.
+* **Result (On Mismatch):** If *any* of these checks fail, the bot **will not start**. It triggers the "Critical Alert System".
+
+#### 8. Safety: Critical Alert System (On Reconciliation Failure)
+* **Trigger:** The `reconcile_state()` function detects a mismatch (desync).
+* **Action 1 (Visual Alert):** The script uses `tkinter.messagebox` to create a **blocking popup window** that appears on top of all other windows.
+* **Action 2 (Audible Alert):** The script prints the `\a` character to emit a **system beep/alert sound**.
+* **Action 3 (Error Message):** The popup window displays the error (e.g., `CRITICAL STATE MISMATCH!`) and lists the **"Manual Reset Procedure"**.
+* **Action 4 (Hard Stop):** The script freezes until the user clicks "OK" on the popup. It then calls `sys.exit(1)`, forcing a **complete and safe shutdown**.
+* **Manual Reset Procedure (The User's Job):** The message instructs the user to:
+    1.  Manually close all open TQQQ positions in TWS.
+    2.  Manually cancel all open TQQQ orders in TWS.
+    3.  Delete the `bot_state.json` file.
+    4.  Restart the bot (which will now start safely from Level 0).
+
+#### 9. Critical Bug Prevention (Internal)
+* **Order Spam:** An `asyncio.Lock` (`processing_lock`) *must* be used within all event handlers (`on_fill`, `on_pending_ticker`) to ensure only one piece of logic runs at a time, preventing multiple ticks or fills from causing duplicate orders.
+* **`sleep` Bug Fix:** The correct asynchronous sleep command `await self.ib.sleep(seconds)` *must* be used (e.g., in the L0 monitor).
