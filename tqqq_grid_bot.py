@@ -103,11 +103,11 @@ class GridBot:
             price = highest_level_lot.purchase_price
 
             if highest_level_lot.level > 0:
-                 l0_lot = next(lot for lot in self.lot_inventory if lot.level == 0)
-                 ref_price = l0_lot.purchase_price
-                 for _ in range(highest_level_lot.level):
-                     ref_price = ref_price * BUY_TRIGGER_PERCENT
-                 price = ref_price
+                l0_lot = next(lot for lot in self.lot_inventory if lot.level == 0)
+                ref_price = l0_lot.purchase_price
+                for _ in range(highest_level_lot.level):
+                    ref_price = ref_price * BUY_TRIGGER_PERCENT
+                price = ref_price
 
             return round(price, 2)
         except StopIteration:
@@ -148,8 +148,9 @@ class GridBot:
     async def initialize_state_from_tws(self):
         log.info("Initializing state from TWS using self-healing logic...")
         qty_to_level_map = {v: k for k, v in self.lot_map.set_index('level')['shares_to_buy'].to_dict().items()}
-        open_orders = await self.ib.reqAllOpenOrdersAsync()
-        open_sell_trades = [t for t in open_orders if t.contract.conId == self.contract.conId and t.order.action == 'SELL']
+
+        # Use ib.openTrades() to get the current list of open orders known to ib_insync
+        open_sell_trades = [t for t in self.ib.openTrades() if t.contract.conId == self.contract.conId and t.order.action == 'SELL']
 
         if not open_sell_trades:
             log.info("No open SELL orders found.")
@@ -194,7 +195,6 @@ class GridBot:
         for ticker in tickers:
             if ticker.contract.conId == self.contract.conId and ticker.last > 0:
                 if self.next_level == 0 and not self.l0_buy_in_progress:
-                    self.l0_buy_in_progress = True
                     asyncio.create_task(self.execute_buy_level_0(ticker.last))
 
     async def execute_buy_level_0(self, current_price):
@@ -233,7 +233,7 @@ class GridBot:
                 self.buy_reference_price = new_lot.purchase_price if level == 0 else round(self.buy_reference_price * BUY_TRIGGER_PERCENT, 2)
                 self.next_level += 1
                 log.info(f"State updated. New next_level: {self.next_level}. New ref_price: {self.buy_reference_price}")
-                await self.place_future_buy_queue()
+                await self.place_future_buy_queue(filledOrderId=orderId)
             elif action == "SLD":
                 lot_to_remove = next((lot for lot in self.lot_inventory if lot.sell_order_id == orderId), None)
                 if lot_to_remove:
@@ -249,12 +249,20 @@ class GridBot:
         order = LimitOrder('SELL', lot.quantity, lot.sell_target_price, tif='GTC', outsideRth=True)
         return self.ib.placeOrder(self.contract, order)
 
-    async def place_future_buy_queue(self):
-        log.info(f"Placing/Updating next {FUTURE_BUY_QUEUE_DEPTH} conditional BUY orders...")
-        open_orders = await self.ib.reqAllOpenOrdersAsync()
-        for trade in open_orders:
-            if trade.contract.conId == self.contract.conId and trade.order.action == 'BUY' and trade.order.conditions:
-                log.warning(f"Cancelling old conditional BUY order (Id: {trade.order.orderId}, Price: {trade.order.lmtPrice}).")
+    async def place_future_buy_queue(self, filledOrderId=None):
+        log.info("Placing/Updating next {FUTURE_BUY_QUEUE_DEPTH} conditional BUY orders...")
+
+        # Use the more reliable ib.openTrades() to find orders to cancel
+        # This list is populated by ib_insync from openOrder events
+        open_trades = self.ib.openTrades()
+        for trade in open_trades:
+            # Skip the order that was just filled to prevent a race condition
+            if trade.order.orderId == filledOrderId:
+                continue
+
+            # Cancel any other open BUY orders for this symbol that are LMT or LIT
+            if trade.contract.conId == self.contract.conId and trade.order.action == 'BUY' and trade.order.orderType in ('LMT', 'LIT'):
+                log.warning(f"Cancelling old BUY order (Id: {trade.order.orderId}, Type: {trade.order.orderType}).")
                 self.ib.cancelOrder(trade.order)
 
         await asyncio.sleep(0.5)
@@ -276,12 +284,16 @@ class GridBot:
             current_trigger_price = trigger_price
 
     async def place_conditional_buy(self, quantity, trigger_price):
-        order = LimitOrder('BUY', quantity, trigger_price, outsideRth=True, transmit=False)
-        order.conditionsIgnoreRth = True
-        order.conditions.append(PriceCondition(
-            conId=self.contract.conId,
-            price=trigger_price, isMore=False))
+        # Using a Limit-if-Touched (LIT) order for robust conditional execution.
+        order = Order()
+        order.action = 'BUY'
+        order.orderType = 'LIT'
+        order.totalQuantity = quantity
+        order.lmtPrice = trigger_price
+        order.auxPrice = trigger_price
+        order.outsideRth = True
         order.transmit = True
+
         self.ib.placeOrder(self.contract, order)
 
     async def place_and_monitor_order(self, action, quantity, limit_price):

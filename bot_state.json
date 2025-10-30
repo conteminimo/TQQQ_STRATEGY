@@ -1,5 +1,12 @@
 [
     {
+        "level": 1,
+        "quantity": 88,
+        "purchase_price": 118.61,
+        "sell_target_price": 119.8,
+        "sell_order_id": 37
+    },
+    {
         "level": 0,
         "quantity": 94,
         "purchase_price": 119.84,
