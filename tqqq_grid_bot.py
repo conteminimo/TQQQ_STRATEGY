@@ -277,6 +277,7 @@ class GridBot:
 
     async def place_conditional_buy(self, quantity, trigger_price):
         order = LimitOrder('BUY', quantity, trigger_price, outsideRth=True, transmit=False)
+        order.conditionsIgnoreRth = True
         order.conditions.append(PriceCondition(
             conId=self.contract.conId,
             price=trigger_price, isMore=False))

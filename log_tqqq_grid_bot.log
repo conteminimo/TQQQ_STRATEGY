@@ -6141,3 +6141,265 @@ TypeError: PriceCondition.__init__() got an unexpected keyword argument 'Conjunc
 2025-10-29 19:31:57,449 - INFO - Warning 2108, reqId -1: Market data farm connection is inactive but should be available upon demand.usopt.nj
 2025-10-29 19:31:57,450 - INFO - Warning 2108, reqId -1: Market data farm connection is inactive but should be available upon demand.usopt.nj
 2025-10-29 19:32:11,205 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:32:31,206 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:32:51,207 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:33:11,208 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:33:25,092 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=119.62999725, marketValue=11245.22, averageCost=119.8506603, unrealizedPNL=-20.74, realizedPNL=360.54, account='DUN136355')
+2025-10-29 19:33:31,210 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:33:51,211 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:34:11,212 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:34:31,213 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:34:51,215 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:35:11,216 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:35:31,218 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:35:51,220 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:36:11,222 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:36:25,195 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=119.34999845, marketValue=11218.9, averageCost=119.8506603, unrealizedPNL=-47.06, realizedPNL=360.54, account='DUN136355')
+2025-10-29 19:36:31,224 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:36:51,224 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:37:11,226 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:37:31,228 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:37:51,229 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:38:11,231 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:38:31,233 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:38:51,235 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:39:11,237 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:39:25,223 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=119.23999785, marketValue=11208.56, averageCost=119.8506603, unrealizedPNL=-57.4, realizedPNL=360.54, account='DUN136355')
+2025-10-29 19:39:31,239 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:39:51,240 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:40:11,242 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:40:31,243 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:40:51,244 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:41:11,246 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:41:31,248 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:41:51,251 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:42:11,252 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:42:25,304 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=119.26000215, marketValue=11210.44, averageCost=119.8506603, unrealizedPNL=-55.52, realizedPNL=360.54, account='DUN136355')
+2025-10-29 19:42:31,254 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:42:51,255 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:43:11,258 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:43:31,260 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:43:51,261 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:44:11,263 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:44:31,266 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:44:51,268 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:45:11,269 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:45:18,773 - INFO - Warning 2104, reqId -1: Market data farm connection is OK:usopt.nj
+2025-10-29 19:45:25,399 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=119.3899994, marketValue=11222.66, averageCost=119.8506603, unrealizedPNL=-43.3, realizedPNL=360.54, account='DUN136355')
+2025-10-29 19:45:31,272 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:45:51,273 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:46:11,276 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:46:31,278 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:46:51,280 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:47:11,282 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:47:31,284 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:47:51,286 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:47:57,491 - INFO - Warning 2108, reqId -1: Market data farm connection is inactive but should be available upon demand.usopt.nj
+2025-10-29 19:47:57,491 - INFO - Warning 2108, reqId -1: Market data farm connection is inactive but should be available upon demand.usopt.nj
+2025-10-29 19:48:11,288 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:48:25,719 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=119.62000275, marketValue=11244.28, averageCost=119.8506603, unrealizedPNL=-21.68, realizedPNL=360.54, account='DUN136355')
+2025-10-29 19:48:31,291 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:48:51,293 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:49:11,296 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:49:31,298 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:49:51,300 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:50:11,302 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:50:31,304 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:50:51,306 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:51:11,308 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:51:25,760 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=119.9599991, marketValue=11276.24, averageCost=119.8506603, unrealizedPNL=10.28, realizedPNL=360.54, account='DUN136355')
+2025-10-29 19:51:31,309 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:51:51,311 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:52:11,312 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:52:31,313 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:52:51,315 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:53:09,963 - INFO - Warning 2104, reqId -1: Market data farm connection is OK:usopt.nj
+2025-10-29 19:53:11,316 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:53:31,318 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:53:51,319 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:53:52,802 - ERROR - Error 398, reqId 10: Condition trigger error: Please provide valid financial instrument.
+2025-10-29 19:53:53,982 - ERROR - Error 398, reqId 11: Condition trigger error: Please provide valid financial instrument.
+2025-10-29 19:54:11,321 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:54:26,038 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.05999755, marketValue=11285.64, averageCost=119.8506603, unrealizedPNL=19.68, realizedPNL=360.54, account='DUN136355')
+2025-10-29 19:54:31,322 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:54:51,324 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:55:11,325 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:55:31,327 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:55:51,328 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:56:11,330 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:56:31,331 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:56:51,332 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:57:11,333 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:57:25,893 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.08000185, marketValue=11287.52, averageCost=119.8506603, unrealizedPNL=21.56, realizedPNL=360.54, account='DUN136355')
+2025-10-29 19:57:31,325 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:57:51,321 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:58:11,322 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:58:31,323 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:58:51,324 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:59:11,326 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:59:31,327 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:59:51,329 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 19:59:57,505 - INFO - Warning 2108, reqId -1: Market data farm connection is inactive but should be available upon demand.usopt.nj
+2025-10-29 19:59:57,507 - INFO - Warning 2108, reqId -1: Market data farm connection is inactive but should be available upon demand.usopt.nj
+2025-10-29 20:00:11,330 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:00:25,992 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:00:31,332 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:00:51,333 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:01:11,334 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:01:31,336 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:01:51,337 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:02:11,338 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:02:31,340 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:02:51,341 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:03:11,343 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:03:26,025 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:03:31,344 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:03:51,346 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:04:11,347 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:04:31,349 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:04:51,350 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:05:11,351 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:05:31,352 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:05:51,354 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:06:11,355 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:06:26,190 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:06:31,356 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:06:51,356 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:07:11,358 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:07:31,360 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:07:51,362 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:08:11,365 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:08:31,367 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:08:51,369 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:09:11,372 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:09:26,311 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:09:31,374 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:09:51,377 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:10:11,380 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:10:31,382 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:10:51,385 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:11:11,387 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:11:31,390 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:11:51,393 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:12:11,395 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:12:26,343 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:12:31,396 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:12:51,398 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:13:11,401 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:13:31,403 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:13:51,406 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:14:11,408 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:14:31,412 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:14:51,414 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:15:11,416 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:15:26,397 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:15:31,419 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:15:51,421 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:16:11,424 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:16:31,426 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:16:51,429 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:17:11,431 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:17:31,433 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:17:51,434 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:18:11,435 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:18:26,476 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:18:31,438 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:18:51,440 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:19:11,443 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:19:31,445 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:19:51,450 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:20:11,451 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:20:31,453 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:20:51,455 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:21:11,458 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:21:26,576 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:21:31,460 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:21:51,461 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:22:11,462 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:22:31,464 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:22:51,468 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:23:11,471 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:23:31,450 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:23:51,440 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:24:11,439 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:24:26,583 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:24:31,440 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:24:51,442 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:25:11,444 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:25:31,445 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:25:51,447 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:26:11,450 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:26:31,453 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:26:51,455 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:27:11,457 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:27:24,909 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:27:31,459 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:27:51,460 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:28:11,463 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:28:31,467 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:28:51,469 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:29:11,471 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:29:31,473 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:29:51,474 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:30:00,356 - INFO - orderStatus: Trade(contract=Stock(conId=72539702, symbol='TQQQ', right='?', exchange='SMART', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), order=Order(orderId=6, clientId=101, permId=2074965171, action='SELL', totalQuantity=94.0, orderType='LMT', lmtPrice=121.04, auxPrice=0.0, tif='GTC', ocaType=3, displaySize=2147483647, outsideRth=True, trailStopPrice=120.04, openClose='', volatilityType=0, deltaNeutralOrderType='None', referencePriceType=0, account='DUN136355', clearingIntent='IB', adjustedOrderType='None', cashQty=0.0, dontUseAutoPriceForHedge=True), orderStatus=OrderStatus(orderId=6, status='PreSubmitted', filled=0.0, remaining=94.0, avgFillPrice=0.0, permId=2074965171, parentId=0, lastFillPrice=0.0, clientId=101, whyHeld='', mktCapPrice=0.0), fills=[], log=[TradeLogEntry(time=datetime.datetime(2025, 10, 29, 23, 28, 50, 149687, tzinfo=datetime.timezone.utc), status='Submitted', message='', errorCode=0), TradeLogEntry(time=datetime.datetime(2025, 10, 30, 0, 30, 0, 354955, tzinfo=datetime.timezone.utc), status='PreSubmitted', message='', errorCode=0)], advancedError='')
+2025-10-29 20:30:05,396 - INFO - orderStatus: Trade(contract=Stock(conId=72539702, symbol='TQQQ', right='?', exchange='SMART', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), order=Order(orderId=6, clientId=101, permId=2074965171, action='SELL', totalQuantity=94.0, orderType='LMT', lmtPrice=121.04, auxPrice=0.0, tif='GTC', ocaType=3, displaySize=2147483647, outsideRth=True, trailStopPrice=120.04, openClose='', volatilityType=0, deltaNeutralOrderType='None', referencePriceType=0, account='DUN136355', clearingIntent='IB', adjustedOrderType='None', cashQty=0.0, dontUseAutoPriceForHedge=True), orderStatus=OrderStatus(orderId=6, status='Submitted', filled=0.0, remaining=94.0, avgFillPrice=0.0, permId=2074965171, parentId=0, lastFillPrice=0.0, clientId=101, whyHeld='', mktCapPrice=0.0), fills=[], log=[TradeLogEntry(time=datetime.datetime(2025, 10, 29, 23, 28, 50, 149687, tzinfo=datetime.timezone.utc), status='Submitted', message='', errorCode=0), TradeLogEntry(time=datetime.datetime(2025, 10, 30, 0, 30, 0, 354955, tzinfo=datetime.timezone.utc), status='PreSubmitted', message='', errorCode=0), TradeLogEntry(time=datetime.datetime(2025, 10, 30, 0, 30, 5, 395739, tzinfo=datetime.timezone.utc), status='Submitted', message='', errorCode=0)], advancedError='')
+2025-10-29 20:30:11,476 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:30:24,877 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:30:31,476 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:30:51,477 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:31:11,479 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:31:31,481 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:31:51,482 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:32:11,484 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:32:31,486 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:32:51,487 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:33:11,489 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:33:24,884 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:33:31,491 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:33:51,492 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:34:11,495 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:34:31,496 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:34:51,498 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:35:11,500 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:35:31,501 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:35:51,503 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:36:11,505 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:36:25,012 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:36:31,506 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:36:51,507 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:37:11,508 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:37:31,509 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:37:51,511 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:38:11,514 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:38:31,517 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:38:51,518 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:39:11,520 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:39:24,988 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:39:31,521 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:39:51,523 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:40:11,525 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:40:31,526 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:40:51,528 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:41:11,530 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:41:31,533 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:41:51,536 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:42:11,539 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:42:25,069 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:42:31,541 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:42:51,544 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:43:11,547 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:43:31,547 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:43:51,549 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:44:11,552 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:44:31,555 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:44:51,556 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:45:11,558 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:45:25,122 - INFO - updatePortfolio: PortfolioItem(contract=Stock(conId=72539702, symbol='TQQQ', right='0', primaryExchange='NASDAQ', currency='USD', localSymbol='TQQQ', tradingClass='NMS'), position=94.0, marketPrice=120.01999665, marketValue=11281.88, averageCost=119.8506603, unrealizedPNL=15.92, realizedPNL=360.54, account='DUN136355')
+2025-10-29 20:45:31,560 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:45:51,561 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:46:11,564 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:46:31,565 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:46:51,565 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:47:11,566 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:47:31,643 - INFO - Bot running... Open lots: 1. Next level: 1
+2025-10-29 20:47:51,645 - INFO - Bot running... Open lots: 1. Next level: 1
