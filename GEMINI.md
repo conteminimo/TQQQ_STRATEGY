@@ -2,9 +2,15 @@
 
 ## Project Overview
 
-This project is an automated, resilient grid trading bot written in Python. It connects to Interactive Brokers (TWS or Gateway) to execute a specific grid trading strategy on the **TQQQ** ETF.
+This project is an automated, resilient grid trading bot written in Python. It uses Interactive Brokers (TWS or Gateway) for trading and Alpaca for real-time market data.
 
-The bot is built with an asynchronous, event-driven architecture using the `ib_insync` library. Its core component is the `GridBot` class, which manages the connection, state, and order logic.
+## Architecture
+
+The bot uses a hybrid approach for its operation:
+- **Trading:** All orders (BUY and SELL) are executed through the Interactive Brokers API (`ib_insync`).
+- **Market Data:** Real-time price data for TQQQ is fetched from the Alpaca API (`alpaca-py`). This is used to trigger the initial (Level 0) buy order.
+
+This separation allows the bot to leverage the real-time data from Alpaca while using the robust trading infrastructure of Interactive Brokers.
 
 A key feature of this bot is its **self-healing startup logic**. Instead of relying on a potentially stale local state file, the bot reconstructs its entire inventory of open positions at startup by:
 1.  Fetching all open SELL orders for TQQQ from TWS.
@@ -19,10 +25,11 @@ This makes the bot highly resilient to crashes or restarts, as it derives its st
 
 ### 1. Dependencies
 
-This project requires Python 3. The primary dependencies can be inferred from the script's imports. No `requirements.txt` file was found.
+This project requires Python 3. The primary dependencies are:
 
 *   `ib_insync`
 *   `pandas`
+*   `alpaca-py`
 
 ### 2. Setup
 

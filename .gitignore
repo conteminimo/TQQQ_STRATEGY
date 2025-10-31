@@ -9,3 +9,4 @@ db_tqqq_grid_bot.sqlite
 # Folders
 __pycache__/
 screenshots
+.env
