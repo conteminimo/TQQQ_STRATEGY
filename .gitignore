@@ -1,0 +1,11 @@
+
+# Environment variables
+# Files
+.env
+.DS_Store
+GEMINI.md
+db_tqqq_grid_bot.sqlite
+
+# Folders
+__pycache__/
+screenshots
