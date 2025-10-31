@@ -5,8 +5,8 @@
 .DS_Store
 GEMINI.md
 db_tqqq_grid_bot.sqlite
+log_tqqq_grid_bot.log
 
 # Folders
 __pycache__/
 screenshots
-.env
