@@ -10,3 +10,14 @@ log_tqqq_grid_bot.log
 # Folders
 __pycache__/
 screenshots
+
+# TQQQ bot and data files
+TQQQ_1_Minute_Interval_Data-20251104T135117Z-1-001.zip
+TQQQ_1_Minute_Interval_Data/
+__TQQQ_STRATEGY_personal/
+bot_state.json
+daily_data.sqlite
+frd_sample_etf_TQQQ/
+simulation_debug.log
+synthetic_data.sqlite
+unadjusted_market_data.sqlite
